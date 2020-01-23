@@ -10,10 +10,10 @@ session = boto3.Session(
 s3 = session.resource('s3')
 
 # get a handle on the bucket that holds your file
-bucket = s3.Bucket('dev-innowatts-sparkenergy-processing')
+bucket = s3.Bucket('bucket name') # example: energy_market_procesing
 
 # get a handle on the object you want (i.e. your file)
-obj = bucket.Object(key='gas/midwest/r_midwest_customer_info/process_date=2019-09-16/CUSTOMER_20190916_MIDWEST.csv')
+obj = bucket.Object(key='file to read') # example: market/zone1/data.csv
 
 # get the object
 response = obj.get()
